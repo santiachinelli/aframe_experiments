@@ -1,0 +1,41 @@
+<html>
+
+<head>
+        <title>Cam Control Test</title>
+        <meta name="Son of Cover Story" content="Description Here">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+          <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+</head>
+
+<body>
+<a-scene>
+<a-entity environment="preset:yavapai" id="parent" >
+
+<!-- MOUSE AND MOVEMENT CONTROLS CODE -->
+<a-entity id="mouseCursor"
+	position="0 1.6 0"  
+	wasd-controls 
+	look-controls="mouseEnabled: true; pointerLockEnabled: true;"  
+	cursor="rayOrigin: mouse">
+
+<a-entity 
+	camera  
+	position="0 1.6 0">
+<a-cursor
+	geometry="primitive: circle; radius:0.005;"
+    material="color: white; shader: flat">
+    </a-cursor>
+<a-entity id=:"moveHowTo"
+	geometry="primitive: plane; height: 0.5; width: 3" 
+	position="0 -2 -3"
+ 	material="color: gray; opacity: 0.5"
+	text="value: Click anywhere to enable head movement. \n Use arrow keys or WASD to move around. \n Hit ESC Key to stop mouse tracking.;align: center; width:3;"> </a-entity>
+	</a-entity>
+	</a-entity>
+<!-- END MOUSE AND MOVEMENT CONTROLS CODE -->
+
+</a-entity>
+
+</a-scene>

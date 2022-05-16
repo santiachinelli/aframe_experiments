@@ -1,0 +1,48 @@
+<html>
+
+    <head>
+        <title>Weird Shit</title>
+        <meta name="description" content="God Mode Enabled">
+
+        <!-- This turns our HTML into A-Frame! -->
+        <!-- A-Frame -->
+        <script src="../src/aframe.min.js"></script>
+        <!-- Extra Stuff -->
+        <script src="../src/aframe-extras.min.js"></script>
+        <!-- Cool Backgrounds -->
+		<script src="../src/aframe-environment-component.min.js"></script>
+
+	<!--	<script type="text/javascript" src="./src/link-controls.js"</script> -->
+	    </head>
+
+    <body>
+
+        <!-- a-scene contains all our A-Frame HTML -->
+        <a-scene cursor="rayOrigin: mouse">
+                    
+			<a-camera position="0 2 6"></a-camera>
+        	<a-entity environment="preset: threetowers"></a-entity>
+
+
+  <a-entity link="href: test3.html; title: Wow, fuck this!; image: ../img/testportal.png" position=" -1 4 2"><a-torus></a-torus></a-entity>
+
+
+  <a-entity link="href: test3.html; title:A File"; position="2 3 4"><a-octahedron title="Behold, Octahedron!" color="grey" radius="5"></a-octahedron></a-entity>
+
+  <a-image link="href: test3.html; title:A File" src="../media/door.jpg" position="-6 1.5 3" height="2.5" width="1" ></a-image>
+
+   <a-link href: test3.html; title:A File ;  "src='../media/door.jpg' position='-12 1.5 3' height='2.5' width='1'" ></a-link>
+
+<a-dodecahedron color="#FF926B" radius="2" position="6 6 6"></a-dodecahedron>
+
+<!--<a-link window.location.href = 'test3.html'; position=" 0 2 1" title="My Homepage" image="../img/testportal.png"></a-link> -->
+
+  <a-sound src="../media/takeit.m4a" autoplay="false" loop="true"
+    position="2 3 4"></a-sound>
+  <!-- ... -->
+
+        </a-scene>
+        
+    </body>
+
+</html>

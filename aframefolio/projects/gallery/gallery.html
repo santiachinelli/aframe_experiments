@@ -1,0 +1,40 @@
+<html>
+
+<head>
+        <title>A Test Gallery</title>
+        <meta name="The Gallery" content="Description Here">
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+</head>
+
+<body>
+<a-scene cursor="rayOrigin: mouse">
+  <a-assets>
+    <img id="1" src="../media/img/1.jpg">
+    <img id="2" src="../media/img/2.jpg">
+    <img id="3" src="../media/img/3.jpg">
+    <img id="4" src="../media/img/4.jpg">
+    <img id="5" src="../media/img/5.jpg">
+    <img id="6" src="../media/img/6.jpg">
+    <img id="7" src="../media/img/7.jpg">
+    <img id="8" src="../media/img/8.jpg">
+  </a-assets>
+  
+<a-entity id="parent" position="0 3.6 -10">
+<a-box color="purple" depth="0.1" height="6" width="10"></a-box>
+<a-box color="blue" depth="0.1" height="6" width="10" rotation="0 90 0" position="-5 0 5 " >
+  <a-image src="#1" height="2" width="3" rotation="0 0 0" position="-3.5 0 0.1"></a-image>
+  <a-image src="#2" height="2" width="3" rotation="" position="0 0 0.1"></a-image>
+  <a-image src="#3" height="2" width="3" rotation="" position="3.5 0 0.1"></a-image>
+</a-box>
+<a-box color="red" depth="0.1" height="6" width="10" rotation="0 90 0" position="5 0 5 " >
+  <a-image src="#5" height="2" width="3" rotation="" position="-3.5 0 -0.1"></a-image>
+  <a-image src="#6" height="2" width="3" rotation="" position="0 0 -0.1"></a-image>
+  <a-image src="#7" height="2" width="3" rotation="" position="3.5 0 -0.1"></a-image> 
+  </a-box>
+</a-entity>
+
+</a-scene>       
+</body>
+</html>

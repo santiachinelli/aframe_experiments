@@ -1,0 +1,40 @@
+<html>
+
+    <head>
+        <title>Weird Shit</title>
+        <meta name="description" content="Build your own planetarium with A-frame">
+
+        <!-- This turns our HTML into A-Frame! -->
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- a-scene contains all our A-Frame HTML -->
+
+        <a-scene>
+<a-camera position="0 2 6"></a-camera>
+        <a-sky color="cyan"></a-sky>
+        
+		<a-image src="media/lol.png" position="3 2 1" width="2" height="2"></a-image>
+
+		<a-box color="gold" width="3"></a-box>
+
+  <a-image src="media/yes_honey.jpg" position="-3 2 1" width="2" height="2"></a-image>
+
+		  <a-video src="media/santi.mp4" autoplay loop="true" position="0 2 1" width="1.5" height="3" rotation="0 0 -90"></a-video>
+
+  <a-image src="media/hwich.png" position="0 4 1" width="4" height="4"></a-image>
+		  
+        <a-ocean color="purple" depth="100" width="100"></a-ocean>
+
+        </a-scene>
+        
+        <!-- include the Glitch button to show what the webpage is about and to
+        make it easier for folks to view source and remix -->
+        <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+        <script src="https://button.glitch.me/button.js"></script>
+    </body>
+
+</html>

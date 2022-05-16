@@ -1,0 +1,21 @@
+<html>
+
+<head>
+        <title>Title Here</title>
+        <meta name="description" content="Description Here">
+        <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+</head>
+
+<body>
+<a-scene>
+
+
+<a-icosahedron position="0 1 -5" color="#FF926B" radius="2"></a-icosahedron>
+
+
+
+</a-scene>       
+</body>
+</html>

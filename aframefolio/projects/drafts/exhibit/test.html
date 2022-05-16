@@ -1,0 +1,48 @@
+<html>
+
+<head>
+        <title>WIP SOCS</title>
+        <meta name="Son of Cover Story" content="Description Here">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+          <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+</head>
+
+<body>
+<a-scene cursor="rayOrigin: mouse">
+  <a-assets>
+<!--
+    <img id="1" src="../media/img/1.jpg">
+    <img id="2" src="../media/img/2.jpg">
+    <img id="3" src="../media/img/3.jpg">
+    <img id="4" src="../media/img/4.jpg">
+    <img id="5" src="../media/img/5.jpg">
+    <img id="6" src="../media/img/6.jpg">
+    <img id="7" src="../media/img/7.jpg">
+    <img id="8" src="../media/img/8.jpg">
+-->
+
+  </a-assets>
+
+	<a-entity environment="preset:forest" id="parent" >
+
+	<a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+<a-entity id="thebuttonstand">
+	<a-entity
+	  position="0 1.5 -4"
+	  geometry="primitive: box"
+	  material="color: red"
+	  animation__click="property: object3D.position.y; to: 2; dir: alternate; dur: 2000; startEvents: click ; loop: true"
+	 ></a-entity>
+
+<a-entity 
+animation__click2="property: object3D.position.z; to: -0.1; dir: reverse; dur: 2000; startEvents: click ; loop: false"> 
+
+<a-cylinder material="color: yellow"  position="0 1.5 -2" height="0.5" radius="0.25" rotation="90 0 "> </a-cylinder>
+
+</a-entity>
+</a-entity>
+    </a-scene>
+  </body>
+</html>

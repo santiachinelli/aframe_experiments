@@ -1,0 +1,79 @@
+<html>
+
+<head>
+        <title>Cam Control Test</title>
+        <meta name="Son of Cover Story" content="Description Here">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+          <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+</head>
+
+<body>
+<a-scene>
+  <a-assets>
+<!--
+    <img id="1" src="../media/img/1.jpg">
+    <img id="2" src="../media/img/2.jpg">
+    <img id="3" src="../media/img/3.jpg">
+    <img id="4" src="../media/img/4.jpg">
+    <img id="5" src="../media/img/5.jpg">
+    <img id="6" src="../media/img/6.jpg">
+    <img id="7" src="../media/img/7.jpg">
+    <img id="8" src="../media/img/8.jpg">
+-->
+
+  </a-assets>
+  
+
+	<a-entity environment="preset:dream" id="parent" >
+
+<!-- MOUSE AND MOVEMENT CONTROLS CODE -->
+<a-entity id="mouseCursor"
+	position="0 1.6 0"  
+	wasd-controls 
+	look-controls="mouseEnabled: true; pointerLockEnabled: true;"  
+	cursor="rayOrigin: mouse">
+<a-entity 
+	camera  
+	position="0 1.6 0">
+<a-cursor
+	geometry="primitive: circle; radius:0.005;"
+    material="color: white; shader: flat">
+    </a-cursor>
+<a-entity id=:"moveHowTo"
+	geometry="primitive: plane; height: 0.5; width: 3" 
+	position="0 -2 -3"
+ 	material="color: gray; opacity: 0.5"
+	text="value: Click anywhere to enable head movement. \n Use arrow keys or WASD to move around. \n Hit ESC Key to stop mouse tracking.;align: center; width:3;"> </a-entity>
+
+	</a-entity>
+	</a-entity>
+<!-- END MOUSE AND MOVEMENT CONTROLS CODE -->>
+	
+
+<a-entity position="0 -1 -5" rotation="0 30" >
+
+<a-entity id="thebuttonstand" >
+<a-entity text="value: Press Me To Party;align: center; width:4;" position="0 4.75 0.5" ></a-entity>
+<a-entity position="0 1 0" ; rotation= "0 -90" ;visualAspectEnabled="false"><a-gltf-model src="../../media/models/the_button_slim.gltf">
+</a-gltf-model>
+</a-entity>
+
+
+<a-entity 
+animation__click2="property: object3D.position.z; 
+to: -0.1;
+dir: reverse;
+dur: 1000;
+startEvents: click;
+loop: false"> 
+<a-cylinder material="color: red"  position="0 3.5 0.5" height="0.5" radius="0.5" rotation="90 0" sound="src: url(../../media/vid/takeit.m4a); on: click">
+</a-cylinder>
+</a-entity>
+
+
+</a-entity>
+    </a-scene>
+  </body>
+</html>

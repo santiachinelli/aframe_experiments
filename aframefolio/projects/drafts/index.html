@@ -1,0 +1,66 @@
+<html>
+
+<head>
+        <title>WIP SOCS</title>
+        <meta name="Son of Cover Story" content="Description Here">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+          <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+</head>
+
+<body>
+<a-scene cursor="rayOrigin: mouse">
+  <a-assets>
+<!--
+    <img id="1" src="../media/img/1.jpg">
+    <img id="2" src="../media/img/2.jpg">
+    <img id="3" src="../media/img/3.jpg">
+    <img id="4" src="../media/img/4.jpg">
+    <img id="5" src="../media/img/5.jpg">
+    <img id="6" src="../media/img/6.jpg">
+    <img id="7" src="../media/img/7.jpg">
+    <img id="8" src="../media/img/8.jpg">
+-->
+
+  </a-assets>
+<a-entity  environment="preset:dream" id="parent" >
+
+
+<a-entity rotation="0 5" position="0 -1 -3">
+<a-entity link="href: ../gallery/gallery.html; title:A File"; position="0 3.5 0" ; visualAspectEnabled="false"><a-gltf-model src="../media/models/book.gltf"><a-text anchor ="center" align="center" value="Click This Book To Enter \n Son of Cover Story" position="0 -1 0.5"></a-text>
+</a-gltf-model>
+</a-entity>
+
+
+<a-entity ; position="0 -0.6 0" rotation="0 45"; visualAspectEnabled="false"><a-gltf-model src="../media/models/simple_column.gltf"></a-gltf-model>
+</a-entity>
+<a-entity text="value: Hello World;"></a-entity>
+</a-entity>
+
+<!--
+<a-link href: test3.html; title:A File ;  "src='../media/door.jpg' position='-12 1.5 3' height='2.5' width='1'" ></a-link> 
+-->
+</a-entity> 
+
+<!--
+<a-entity id="parent" position="0 2 -10">
+<a-box color="purple" depth="0.1" height="4" width="10"></a-box>
+<a-box color="blue" depth="0.1" height="4" width="10" rotation="0 90 0" position="-5 0 5 " >
+  <a-image src="#1" height="2" width="3" rotation="0 0 0" position="-3.5 0 0.1"></a-image>
+  <a-image src="#2" height="2" width="3" rotation="" position="0 0 0.1"></a-image>
+  <a-image src="#3" height="2" width="3" rotation="" position="3.5 0 0.1"></a-image>
+</a-box>
+<a-box color="red" depth="0.1" height="4" width="10" rotation="0 90 0" position="5 0 5 " >
+  <a-image src="#5" height="2" width="3" rotation="" position="-3.5 0 -0.1"></a-image>
+  <a-image src="#6" height="2" width="3" rotation="" position="0 0 -0.1"></a-image>
+  <a-image src="#7" height="2" width="3" rotation="" position="3.5 0 -0.1"></a-image> 
+  </a-box>
+</a-entity> 
+-->
+
+
+
+</a-scene>       
+</body>
+</html>

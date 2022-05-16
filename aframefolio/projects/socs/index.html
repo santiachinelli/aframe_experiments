@@ -1,0 +1,266 @@
+<html>
+
+<head>
+        <title>Son Of Cover Story</title>
+        <meta name="Son of Cover Story" content="Exhibit Hall #1">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+          <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+</head>
+<body>
+<a-scene>
+<a-assets>
+    <img id="ground" src="src/img/light_hardwood_tile.jpg">
+    <img id="door" src="src/img/door.jpg">
+    <img id="plaquette" src="src/img/plaquette.png"
+
+<!-- ART TO BE ADDED TO COLLECTION -->
+    <img id="LL" src="src/img/1.jpg">
+    <img id="LC" src="src/img/2.jpg">
+    <img id="LR" src="src/img/3.jpg">
+    <img id="RR" src="src/img/4.jpg">
+    <img id="RC" src="src/img/5.jpg">
+    <img id="RL" src="src/img/6.jpg">
+    <img id="CL" src="src/img/7.jpg">
+    <img id="CC" src="src/img/8.jpg">
+    <img id="CR" src="src/img/9.jpg">
+
+<!-- AUDIO TO GO WITH ART IN COLLECTION -->
+<audio id="A-LL" src="river.mp3" preload="auto"></audio>
+<audio id="A-LC" src="river.mp3" preload="auto"></audio>
+<audio id="A-LR" src="river.mp3" preload="auto"></audio>
+<audio id="river" src="river.mp3" preload="auto"></audio>
+<audio id="river" src="river.mp3" preload="auto"></audio>
+
+  </a-assets>
+<!-- MOUSE AND MOVEMENT CONTROLS CODE -->
+<a-entity>
+<!-- environment="preset:yavapai" ground="none" groundTexture="none" dressing="none" lighting="none" groundYScale="-1" playArea="100"-->
+<a-entity id="mouseCursor"
+	position="0 1.6 23"	  
+	wasd-controls 
+	look-controls="mouseEnabled: true; pointerLockEnabled: true;" cursor="rayOrigin: mouse">
+
+<a-entity camera position="0 1.6 0">
+<a-cursor
+	geometry="primitive: circle; radius:0.005;"
+    material="color: white; shader: flat">
+    </a-cursor>
+
+	</a-entity>
+	
+	</a-entity>
+
+<!-- END MOUSE AND MOVEMENT CONTROLS CODE -->
+
+<a-sky color="#6EBAA7"></a-sky>
+  <!-- Textured plane parallel to ground. -->
+<a-plane src="#ground" height="100" width="100" repeat="10 10" rotation="-90 0 0"></a-plane>
+  
+<a-entity id="theWalls" position="0 2 -10">
+<a-box color="#DDD8C4" depth="0.1" height="6" width="20">
+  <a-image src="#CL" height="2" width="3" rotation="0 0 0" position="-6.5 1 0.1">
+  <a-image src="#plaquette" height="0.6" width="0.4" rotation="0 0 0" position="2 -0.5 0"></a-image>
+
+		<a-entity>
+		<a-box color="#C8C09F" depth="0.25" height="1" width="1" position="0 -2 0"></a-box>
+		<a-entity 
+		animation__click2="property: object3D.position.z; 
+		to: -0.1;
+		dir: reverse;
+		dur: 1000;
+		startEvents: click;
+		loop: false"> 
+		<a-cylinder material="color: #d62828"  position="0 -2 0.25" height="0.33" radius="0.33" rotation="90 0" sound="src: #A-LL; on: click">
+		</a-cylinder>
+		</a-entity>
+		</a-entity>  
+  </a-image>
+  <a-image src="#CC" height="2" width="3" rotation="" position="0 1 0.1">
+  <a-image src="#plaquette" height="0.6" width="0.4" rotation="0 0 0" position="2 -0.5 0"></a-image>
+
+  <a-entity>
+  		<a-box color="#C8C09F" depth="0.25" height="1" width="1" position="0 -2 0"></a-box>
+  		<a-entity 
+  		animation__click2="property: object3D.position.z; 
+  		to: -0.1;
+  		dir: reverse;
+  		dur: 1000;
+  		startEvents: click;
+  		loop: false"> 
+  		<a-cylinder material="color: #d62828"  position="0 -2 0.25" height="0.33" radius="0.33" rotation="90 0" sound="src: #A-LL; on: click">
+  		</a-cylinder>
+  		</a-entity>
+  		</a-entity>
+  </a-image>
+  <a-image src="#CR" height="2" width="3" rotation="" position="6.5 1 0.1">
+  <a-image src="#plaquette" height="0.6" width="0.4" rotation="0 0 0" position="2 -0.5 0"></a-image>
+  <a-entity>
+  		<a-box color="#C8C09F" depth="0.25" height="1" width="1" position="0 -2 0"></a-box>
+  		<a-entity 
+  		animation__click2="property: object3D.position.z; 
+  		to: -0.1;
+  		dir: reverse;
+  		dur: 1000;
+  		startEvents: click;
+  		loop: false"> 
+  		<a-cylinder material="color: #d62828"  position="0 -2 0.25" height="0.33" radius="0.33" rotation="90 0" sound="src: #A-LL; on: click">
+  		</a-cylinder>
+  		</a-entity>
+  		</a-entity>
+  </a-image>
+</a-box>
+<a-box color="#DDD8C4" depth="0.1" height="6" width="20" rotation="0 90 0" position="-10 0 10 " >
+  <a-image src="#LL" height="2" width="3" rotation="0 0 0" position="-6.5 1 0.1">
+  <a-image src="#plaquette" height="0.6" width="0.4" rotation="0 0 0" position="2 -0.5 0"></a-image>
+  <a-entity>
+  		<a-box color="#C8C09F" depth="0.25" height="1" width="1" position="0 -2 0"> </a-box>
+  		<a-entity 
+  		animation__click2="property: object3D.position.z; 
+  		to: -0.1;
+  		dir: reverse;
+  		dur: 1000;
+  		startEvents: click;
+  		loop: false"> 
+  		<a-cylinder material="color: #d62828"  position="0 -2 0.25" height="0.33" radius="0.33" rotation="90 0" sound="src: #A-LL; on: click"> 
+  		</a-cylinder>
+  		
+
+  		</a-entity>
+  		</a-entity>
+  </a-image>
+  <a-image src="#LC" height="2" width="3" rotation="" position="0 1 0.1">
+  <a-image src="#plaquette" height="0.6" width="0.4" rotation="0 0 0" position="2 -0.5 0"></a-image>
+
+  <a-entity>
+  		<a-box color="#C8C09F" depth="0.25" height="1" width="1" position="0 -2 0"></a-box>
+  		<a-entity 
+  		animation__click2="property: object3D.position.z; 
+  		to: -0.1;
+  		dir: reverse;
+  		dur: 1000;
+  		startEvents: click;
+  		loop: false"> 
+  		<a-cylinder material="color: #d62828"  position="0 -2 0.25" height="0.33" radius="0.33" rotation="90 0" sound="src: #A-LL; on: click">
+  		</a-cylinder>
+  		</a-entity>
+  		</a-entity>
+  </a-image>
+  <a-image src="#LR" height="2" width="3" rotation="" position="6.5 1 0.1">
+  <a-image src="#plaquette" height="0.6" width="0.4" rotation="0 0 0" position="2 -0.5 0"></a-image>
+  <a-entity>
+  		<a-box color="#C8C09F" depth="0.25" height="1" width="1" position="0 -2 0"></a-box>
+  		<a-entity 
+  		animation__click2="property: object3D.position.z; 
+  		to: -0.1;
+  		dir: reverse;
+  		dur: 1000;
+  		startEvents: click;
+  		loop: false"> 
+  		<a-cylinder material="color: #d62828"  position="0 -2 0.25" height="0.33" radius="0.33" rotation="90 0" sound="src: #A-LL; on: click">
+  		</a-cylinder>
+  		</a-entity>
+  		</a-entity>
+  </a-image>
+</a-box>
+<a-box color="#DDD8C4" depth="0.1" height="6" width="20" rotation="0 90 0" position="10 0 10 " >
+  <a-image src="#RR" height="2" width="3" rotation="0 180 0" position="-6.5 1 -0.1">
+  <a-image src="#plaquette" height="0.6" width="0.4" rotation="0 0 0" position="2 -0.5 0"></a-image>
+
+  <a-entity>
+  		<a-box color="#C8C09F" depth="0.25" height="1" width="1" position="0 -2 0"></a-box>
+  		<a-entity 
+  		animation__click2="property: object3D.position.z; 
+  		to: -0.1;
+  		dir: reverse;
+  		dur: 1000;
+  		startEvents: click;
+  		loop: false"> 
+  		<a-cylinder material="color: #d62828"  position="0 -2 0.25" height="0.33" radius="0.33" rotation="90 0" sound="src: #A-LL; on: click">
+  		</a-cylinder>
+  		</a-entity>
+  		</a-entity>
+  </a-image>
+  <a-image src="#RC" height="2" width="3" rotation="0 180 0" position="0 1 -0.1">
+  <a-image src="#plaquette" height="0.6" width="0.4" rotation="0 0 0" position="2 -0.5 0"></a-image>
+
+  <a-entity>
+  		<a-box color="#C8C09F" depth="0.25" height="1" width="1" position="0 -2 0"></a-box>
+  		<a-entity 
+  		animation__click2="property: object3D.position.z; 
+  		to: -0.1;
+  		dir: reverse;
+  		dur: 1000;
+  		startEvents: click;
+  		loop: false"> 
+  		<a-cylinder material="color: #d62828"  position="0 -2 0.25" height="0.33" radius="0.33" rotation="90 0" sound="src: #A-LL; on: click">
+  		</a-cylinder>
+  		</a-entity>
+  		</a-entity>
+  </a-image>
+  <a-image src="#RL" height="2" width="3" rotation="0 180 0" position="6.5 1 -0.1">
+  <a-image src="#plaquette" height="0.6" width="0.4" rotation="0 0 0" position="2 -0.5 0"></a-image>
+
+  <a-entity>
+  		<a-box color="#C8C09F" depth="0.25" height="1" width="1" position="0 -2 0"></a-box>
+  		<a-entity 
+  		animation__click2="property: object3D.position.z; 
+  		to: -0.1;
+  		dir: reverse;
+  		dur: 1000;
+  		startEvents: click;
+  		loop: false"> 
+  		<a-cylinder material="color: #d62828"  position="0 -2 0.25" height="0.33" radius="0.33" rotation="90 0" sound="src: #A-LL; on: click">
+  		</a-cylinder>
+  		</a-entity>
+  		</a-entity>
+  </a-image> 
+  </a-box>
+
+
+<!-- Doors To Other Spaces -->
+<a-entity id="nextSpace" 
+position="-8 0 25"
+rotation="0 45 0"
+>
+<!-- <a-box color="green" depth="0.1" height="6" width="3"></a-box> -->
+<a-link href="index.html" title="Next Room" image="#homeThumbnail" position="0 0 0.1"></a-link>
+
+
+</a-entity>
+
+<a-entity id="previousSpace" 
+position="8 0 25"
+rotation="0 -45 0">
+<!-- <a-box color="tomato" depth="0.1" height="6" width="3"> -->
+<a-link href="index.html" title="Previous Room" image="#homeThumbnail" position="0 0 0.1"></a-link>
+</a-box>
+</a-entity>
+
+</a-entity>
+<!-- door stuff
+<a-image title="Next Hall" link="href:../gallery/gallery.html" 
+src="#door" 
+height="2.5" 
+width="1" 
+position="0 0 0.1"></a-image>
+-->
+<!-- End of Doors Code -->
+
+<a-entity id=:"GlassPane"
+	geometry="primitive: plane; height: 5; width: 8" 
+	position="0 2.5 18"
+ 	material="color: white; opacity: 0"
+	> </a-entity>
+
+<a-entity id=:"moveHowTo2"
+	geometry="primitive: plane; height: 0.5; width: 3" 
+	position="0 2 18"
+ 	material="color: #6EBAA7; opacity: 1"
+	text="value: Click anywhere to enable head movement. \n Use arrow keys or WASD to move around. \n Hit ESC Key to stop mouse tracking.;align: center; width:3;"> </a-entity>
+	
+
+</a-entity>
+</a-entity>
+</a-scene>
